@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MDLinks</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,800" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div id="wrapper">
+        <unloaded v-if="!$store.state.loaded.user"></unloaded>
+        <authorized v-else-if="$store.state.user.logged"></authorized>
+        <guest v-else></guest>
+      </div>
+    </div>
+    <script src="/js/app.js" charset="utf-8"></script>
+  </body>
+</html>

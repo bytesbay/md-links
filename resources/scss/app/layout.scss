@@ -1,0 +1,123 @@
+:focus { outline: none; }
+::-moz-focus-inner { border: 0; }
+::placeholder { color: #acaeb9; opacity: 1; }
+
+html {
+  overflow: hidden;
+  overflow-y: auto;
+  min-width: 320px;
+  background-color: #fff;
+  color: $clr-black;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+#templatewrapper {
+  width: 100%;
+}
+
+a {
+  color: $clr-d-pink;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: $clr-d-pink;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bg-img {
+  background-color: #eee;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.header-btn {
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 40px;
+  height: 30px;
+  opacity: 1;
+  transition: 0.3s opacity ease;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+.vue-scrollbar__wrapper {
+  .vue-scrollbar__scrollbar-vertical {
+    background: $clr-gray !important;
+    opacity: 1 !important;
+    .scrollbar {
+      background: #c4c4c4 !important;
+    }
+  }
+}
+.v--modal {
+  border-radius: 10px !important;
+}
+
+.animated {
+  animation-duration: 0.3s;
+}
+
+.elipsed {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.v--modal-overlay .v--modal-box {
+  overflow: visible !important;
+}

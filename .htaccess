@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+	# RewriteCond %{REQUEST_FILENAME} !-d
+	# RewriteRule ^(.*)$ public/$1 [L,R=301]
+
+    RewriteCond %{REQUEST_URI} ^\/$ [NC]
+	RewriteRule ^ public/index.php [L]
+
+	RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.jpeg|\.svg|\.ico|\.ttf|\.woff|\.gif|robots\.txt|\.zip|\.rar)$ [NC]
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^ public/index.php [L]
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_URI} !((^/public/)|(^/storage/))
+	RewriteRule ^(.*)$ public/$1 [L,NC]
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_URI} ^/storage/
+	RewriteRule ^storage/(.*)$ storage/app/$1 [L,NC]
+</IfModule>
